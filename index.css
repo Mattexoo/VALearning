@@ -1,4 +1,14 @@
+*{
+    margin:0;
+}
 
+
+:root{
+    --bluScuro: #000080;
+    --azzurro:#4c80cb;
+    --azzurro2:#506aff;
+    --rosso: #fc2d47;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -33,3 +43,7 @@ main{
 header{
     width: 100%;
 }
+
+
+
+
