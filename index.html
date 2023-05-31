@@ -51,28 +51,31 @@
             
             <!--Barra di ricerca con etichette uguale a quella della ricerca degli esercizi-->
             
-                
-                <input type="text" placeholder="Inserisci argomenti..." id="argomenti" class="form-control">
-            
+                <div id="container-argomenti">
+                    <input type="text" placeholder="Inserisci argomenti..." id="argomenti" class="form-control">
+                </div>
 
                 <div class ="was-validated">
                     <input id="nEsercizi" class="my-4 form-check-control form-control" type="number" min="3" max="30" placeholder="Inserisci il numero esercizi(3-30)" required>
                 </div>
 
-                <select id="livello" class="form-select"> <!--Selezionata in partenza in base al livello dell'utente-->
-                    <option value="A2">A2</option> 
-                    <option value="B1">B1</option>
-                    <option value="B2">B2</option>
-                    <option value="C1">C1</option>
-                </select>
-                
-                <button class="btn btn-success my-4" onclick="genera()">
+                <div id="container-livello">
+                    <select id="livello" class="form-select"> <!--Selezionata in partenza in base al livello dell'utente-->
+                        <option value="A2">A2</option> 
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="C1">C1</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success my-4" onclick="check()">
                     CREA LA TUA VERIFICA
                 </button>
                   
         </div>
-        <script src="js/generazione.js" onload="selezionaLivello()"></script>     
-        </div>
+        <script src="js/generazione.js" onload="selezionaLivello()"></script>   
+
+
     </main>
     <footer>
         Creato dalla 3 A INF nel 2023

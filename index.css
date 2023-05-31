@@ -2,6 +2,7 @@
     margin:0;
 }
 
+
 /*Definizione delle variabili css relative ai colori*/
 :root{
     --bluScuro: #000080;
@@ -30,6 +31,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0px;
+ 
 }
 
 .navbar-brand{
@@ -50,6 +52,24 @@ header{
     width: 100%;
 }
 
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+.dropdown-toggle{
+    text-align: left;
+    font-size: 25px;
+    height: 50px;
+    margin-bottom:5px;
+}
 
 
 
+.dropdown-item:hover{
+    background-color:lightgrey;
+}
+
+.consegna{
+    font-size: smaller;
+}
