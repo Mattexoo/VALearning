@@ -32,5 +32,15 @@ let nEs = document.getElementById("nEsercizi");
 nEs.value = 3;
 
 function genera(){
+    nEsCheck();
 
 }
+/*
+function nEsCheck(){
+    let nEs = document.getElementById("nEsercizi");
+
+    if(nEs.value<3 || nEs.value>30){
+        nEs.classList.add("invalid-feedback");
+    }
+}
+*/

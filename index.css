@@ -11,7 +11,7 @@
 
 :root{
     --bluScuro: #000080;
-    --azzurro:#4c80cb;
+    --azzurro:#7ea5dd;
     --azzurro2:#506aff;
     --rosso: #fc2d47;
 }
@@ -20,7 +20,7 @@ body{
         Richiamare una variabile
 
     */
-    background-color: var(--azzurro2);
+    background-color: var(--azzurro);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
