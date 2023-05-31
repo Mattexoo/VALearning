@@ -29,7 +29,7 @@ function selezionaLivello(){
 
 let nEs = document.getElementById("nEsercizi");
 
-nEs.value = 3;
+
 
 function genera(){
     nEsCheck();
