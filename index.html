@@ -11,7 +11,6 @@
 
     <link href="index.css" rel="stylesheet">
     <script src="js/index.js"></script>
-    <script src="js/generazione.js"></script>
 </head>
 <body>
     <header>
@@ -42,29 +41,31 @@
     </header>
     <main class="container">
         <!--Titolo-->
+
         <h1>Generatore di Verifiche</h1>
         <h4>Seleziona le tue preferenze</h4>
 
-
-        <!--Selezione filtri--> 
+        <!--Selezione filtri-->
 
         <div class="row my-4">
+            
+            <!--Barra di ricerca con etichette uguale a quella della ricerca degli esercizi-->
             
             <input type="text" placeholder=" Inserisci argomenti..." id="argomenti" class="form-control">
             
             <input id="nEsercizi" class="my-4 form-control" type="number" min="3" max="30" placeholder="Inserisci il numero esercizi(3-30)">
 
             <select id="livello" class="form-select"> <!--Selezionata in partenza in base al livello dell'utente-->
-                <option value="A2" selected>A2</option> 
+                <option value="A2">A2</option> 
                 <option value="B1">B1</option>
                 <option value="B2">B2</option>
                 <option value="C1">C1</option>
             </select>
-
-            <button class="btn btn-success my-4">
+            <button class="btn btn-success my-4" onclick="genera()">
                 CREA LA TUA VERIFICA
-            </button>
-        
+            </button>        
+        </div>
+        <script src="js/generazione.js" onload="selezionaLivello()"></script>     
         </div>
     </main>
     <footer>

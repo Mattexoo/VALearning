@@ -18,8 +18,9 @@
 body{
     /*
         Richiamare una variabile
-        background-color: var(--rosso);
+
     */
+    background-color: var(--azzurro2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
