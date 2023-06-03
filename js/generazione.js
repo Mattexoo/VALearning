@@ -82,9 +82,9 @@ function genera(){
         
                 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 1</a></li>
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 2</a></li>
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 3</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(0,${i})" href="#">Risposta 1</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(1,${i})" href="#">Risposta 2</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(2,${i})" href="#">Risposta 3</a></li>
                 </ul>
             </div>
             
@@ -99,9 +99,9 @@ function genera(){
         
                 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 1</a></li>
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 2</a></li>
-                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 3</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(0,${i})" href="#">Risposta 1</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(1,${i})" href="#">Risposta 2</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(2,${i})" href="#">Risposta 3</a></li>
                 </ul>
             </div>
             
@@ -128,12 +128,17 @@ function coloraGiallo(i){
 
 }
 
-function coloraBlu(i){
-    let esercizio = document.getElementsByClassName("dropdown-toggle")[i];
+function coloraBlu(item, domanda){
+    let esercizio = document.getElementsByClassName("dropdown-toggle")[domanda];
 
     esercizio.classList.remove("btn-warning");
     esercizio.classList.add("btn-primary");
 
+    esercizio.innerText = "Esercizio " + domanda + " - Consegna Esercizio " + domanda + " - Risposta selezionata: " + (item+1);
+
+    
+
+    
     
 
 }
