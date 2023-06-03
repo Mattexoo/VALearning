@@ -75,7 +75,7 @@ function genera(){
         
         if(i%2==0) // Risposta multipla
             child.innerHTML = `
-            <div class="row dropdown">
+            <div class="row dropdown my-3">
                 <a class="btn btn-secondary dropdown-toggle col-12" href="#" role="button" onclick="coloraGiallo(${i})" data-bs-toggle="dropdown" aria-expanded="false">
                     Esercizio ${i+1} - <span class="consegna">Consegna Esercizio ${i+1}</span>
                 </a>
