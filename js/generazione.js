@@ -50,21 +50,6 @@ function check(){
 
 
 
-let template1 = `
-    <div class="row dropdown">
-        <a class="btn btn-secondary dropdown-toggle col-12" href="#" role="button" onclick="coloraGiallo()" data-bs-toggle="dropdown" aria-expanded="false">
-            Esercizio  - <span class="consegna">Consegna Esercizio </span>
-        </a>
-
-        
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" onclick="coloraBlu()" href="#">Risposta 1</a></li>
-            <li><a class="dropdown-item" onclick="coloraBlu()" href="#">Risposta 2</a></li>
-            <li><a class="dropdown-item" onclick="coloraBlu()" href="#">Risposta 3</a></li>
-        </ul>
-    </div>
-    
-`;
 
 function genera(){
     //Funzione che pulisce il main e genera gli esercizi da quelli già esistenti
@@ -89,15 +74,43 @@ function genera(){
         
         
         if(i%2==0) // Risposta multipla
-            child.innerHTML = template1;
+            child.innerHTML = `
+            <div class="row dropdown">
+                <a class="btn btn-secondary dropdown-toggle col-12" href="#" role="button" onclick="coloraGiallo(${i})" data-bs-toggle="dropdown" aria-expanded="false">
+                    Esercizio ${i+1} - <span class="consegna">Consegna Esercizio ${i+1}</span>
+                </a>
+        
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 1</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 2</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 3</a></li>
+                </ul>
+            </div>
+            
+        `;
+        
         else//Vero o falso
-            child.innerHTML = template1;
+            child.innerHTML = `
+            <div class="row dropdown">
+                <a class="btn btn-secondary dropdown-toggle col-12" href="#" role="button" onclick="coloraGiallo(${i})" data-bs-toggle="dropdown" aria-expanded="false">
+                    Esercizio ${i+1} - <span class="consegna">Consegna Esercizio ${i+1}</span>
+                </a>
+        
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 1</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 2</a></li>
+                    <li><a class="dropdown-item" onclick="coloraBlu(${i})" href="#">Risposta 3</a></li>
+                </ul>
+            </div>
+            
+        `;
            
         
         main.appendChild(child);
-        child.onclick = "coloraGiallo(" + i + ")";
-        titolo = document.getElementsByClassName("dropdown-toggle")[i];
-        titolo.innerHTML = `Esercizio ${i+1} - <span class="consegna">Consegna Esercizio ${i+1}</span>`;
+    
+        
     }
     
 }
@@ -124,3 +137,5 @@ function coloraBlu(i){
     
 
 }
+
+
